@@ -22,10 +22,20 @@
 				<a href="#home" class="brand" aria-label="Rangechem (Pty) Ltd home">
 				<span class="brand-mark" aria-hidden="true">
 					<svg class="brand-logo" viewBox="0 0 36 36" role="img" focusable="false">
-						<path d="M18 5c1.2 1.4 1.1 2.9-.1 4.2l-.9 1v4l-7.5 10.2c-1.8 2.5 0 5.6 3 5.6h10.9c3 0 4.8-3.1 3-5.6L19 14.2v-4l-.9-1c-1.2-1.3-1.3-2.8-.1-4.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-						<path class="brand-liquid" d="M13 20h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-						<path class="brand-drop" d="M18 6c.95 1 1.45 1.78 1.45 2.65a1.45 1.45 0 1 1-2.9 0c0-.87.5-1.65 1.45-2.65z" fill="currentColor"/>
-						<ellipse class="brand-ripple" cx="18" cy="20" rx="1.1" ry="0.45" fill="none" stroke="currentColor" stroke-width="1.5"/>
+						<defs>
+							<clipPath id="rc-flask-clip">
+								<path d="M14 5 V13 L6 27 C4.5 32 9 35 18 35 C27 35 31.5 32 30 27 L22 13 V5 Z"/>
+							</clipPath>
+						</defs>
+						<rect x="0" y="24" width="36" height="12" fill="currentColor" opacity="0.3" clip-path="url(#rc-flask-clip)"/>
+						<path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" clip-path="url(#rc-flask-clip)" d="M9 24 L27 24">
+							<animate attributeName="d" dur="2.4s" repeatCount="indefinite" calcMode="spline"
+								keyTimes="0; 0.62; 0.70; 0.80; 0.91; 1"
+								keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"
+								values="M9 24 L27 24; M9 24 L27 24; M9 24 Q14 20.5 18 24 Q22 27.5 27 24; M9 24 Q14 22 18 24 Q22 26 27 24; M9 24 Q14 23.2 18 24 Q22 24.8 27 24; M9 24 L27 24"/>
+						</path>
+						<path d="M13 5 H23 M14 5 V13 L6 27 C4.5 32 9 35 18 35 C27 35 31.5 32 30 27 L22 13 V5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path class="brand-drop" d="M18 2 C19.8 4 20.5 5.5 20.5 7.5 A2.5 2.5 0 0 1 15.5 7.5 C15.5 5.5 16.2 4 18 2 Z" fill="currentColor"/>
 					</svg>
 				</span>
 				<span class="brand-text">Rangechem</span>

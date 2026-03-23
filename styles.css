@@ -78,81 +78,35 @@ a {
 }
 
 .brand-drop {
-  transform-origin: center;
-  animation: logo-drop 1.9s ease-in infinite;
-}
-
-.brand-ripple {
-  transform-origin: center;
-  transform-box: fill-box;
-  animation: logo-ripple 1.9s ease-in infinite;
-}
-
-.brand-liquid {
-  animation: logo-liquid 1.9s ease-in infinite;
+  animation: logo-drop 2.4s cubic-bezier(0.55, 0, 1, 0.45) infinite;
 }
 
 @keyframes logo-drop {
   0%,
-  24% {
-    transform: translateY(0) scale(0.88);
+  20% {
+    transform: translateY(0);
     opacity: 0;
   }
 
-  35% {
-    transform: translateY(0) scale(1);
+  28% {
+    transform: translateY(0);
     opacity: 1;
   }
 
-  72% {
-    transform: translateY(10px) scale(1);
-    opacity: 1;
-  }
-
-  78%,
-  100% {
-    transform: translateY(11px) scale(0.82);
-    opacity: 0;
-  }
-}
-
-@keyframes logo-ripple {
-  0%,
   70% {
-    transform: scale(0.45);
-    opacity: 0;
-  }
-
-  80% {
-    transform: scale(1);
-    opacity: 0.75;
-  }
-
-  100% {
-    transform: scale(1.7);
-    opacity: 0;
-  }
-}
-
-@keyframes logo-liquid {
-  0%,
-  70% {
-    opacity: 0.75;
-  }
-
-  82% {
+    transform: translateY(16px);
     opacity: 1;
   }
 
+  77%,
   100% {
-    opacity: 0.78;
+    transform: translateY(17px);
+    opacity: 0;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .brand-drop,
-  .brand-ripple,
-  .brand-liquid {
+  .brand-drop {
     animation: none;
   }
 }
