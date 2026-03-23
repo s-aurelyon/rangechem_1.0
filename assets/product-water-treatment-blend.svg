@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title">
+  <title id="title">Water Treatment Blend</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e9fbff"/>
+      <stop offset="100%" stop-color="#b9ecf7"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect x="300" y="130" width="200" height="350" rx="38" fill="#ffffff" stroke="#4fa9bf" stroke-width="8"/>
+  <path d="M400 228 C340 292 344 354 400 394 C456 354 460 292 400 228Z" fill="#0f7f99"/>
+  <rect x="330" y="422" width="140" height="20" rx="10" fill="#4fa9bf"/>
+</svg>

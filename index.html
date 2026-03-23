@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Rangechem Pty Ltd | Chemical Manufacturing</title>
+	<meta
+		name="description"
+		content="Rangechem Pty Ltd are specialists in domestic and industrial chemical manufacturing."
+	/>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+		rel="stylesheet"
+	/>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<header class="topbar" id="home">
+		<div class="container nav-wrap">
+			<a href="#home" class="brand" aria-label="Rangechem home">
+				<span class="brand-mark">R</span>
+				<span class="brand-text">Rangechem Pty Ltd</span>
+			</a>
+
+			<button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteMenu">
+				☰
+			</button>
+
+			<nav>
+				<ul class="menu" id="siteMenu">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#products">Products</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><button class="menu-btn" data-modal-open="aboutModal">About Us</button></li>
+					<li><button class="menu-btn cta" data-modal-open="quoteModal">Request a Quote</button></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero">
+			<div class="hero-overlay"></div>
+			<div class="container hero-content">
+				<p class="hero-kicker">Trusted Chemical Partner</p>
+				<h1>Specialists in Domestic and Industrial Chemical Manufacturing</h1>
+				<p>
+					Rangechem Pty Ltd develops high-quality chemical solutions for homes,
+					facilities, and production environments.
+				</p>
+				<a href="#products" class="hero-link">View Products</a>
+			</div>
+		</section>
+
+		<section class="section products" id="products">
+			<div class="container">
+				<div class="section-head">
+					<h2>Products</h2>
+					<p>Select products below to include them in your quote request.</p>
+				</div>
+
+				<div class="product-grid" id="productGrid"></div>
+
+				<div class="products-actions">
+					<button id="requestQuoteFromProducts" class="primary-btn">Request a Quote</button>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer" id="contact">
+		<div class="container footer-grid">
+			<div>
+				<h3>Contact</h3>
+				<p>Rangechem Pty Ltd</p>
+				<p>12 Industry Road, Midrand, Johannesburg, South Africa</p>
+				<p><a href="mailto:quotes@rangechem.co.za">quotes@rangechem.co.za</a></p>
+				<p><a href="tel:+27115551234">+27 11 555 1234</a></p>
+			</div>
+
+			<div>
+				<h3>About Rangechem</h3>
+				<p>
+					Rangechem Pty Ltd is focused on safe, compliant, and reliable chemical
+					manufacturing for domestic and industrial applications.
+				</p>
+			</div>
+
+			<div>
+				<h3>Legal</h3>
+				<p>© <span id="year"></span> Rangechem Pty Ltd. All rights reserved.</p>
+				<p>Product specifications may change without notice.</p>
+			</div>
+		</div>
+	</footer>
+
+	<div class="modal" id="aboutModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="aboutModalTitle">
+		<div class="modal-card">
+			<div class="modal-header">
+				<h3 id="aboutModalTitle">About Us</h3>
+				<button class="icon-btn" data-modal-close aria-label="Close About Us">×</button>
+			</div>
+			<p>
+				Rangechem Pty Ltd manufactures domestic and industrial chemical products
+				with a strong focus on quality control, safety standards, and customer
+				support.
+			</p>
+		</div>
+	</div>
+
+	<div class="modal" id="quoteModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle">
+		<div class="modal-card">
+			<div class="modal-header">
+				<h3 id="quoteModalTitle">Request a Quote</h3>
+				<button class="icon-btn" data-modal-close aria-label="Close Request a Quote">×</button>
+			</div>
+
+			<p class="modal-note">Select products and click “Send Request” to open your mail app.</p>
+			<div class="quote-list" id="quoteList"></div>
+
+			<div class="modal-actions">
+				<button class="primary-btn" id="sendRequestBtn">Send Request</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>

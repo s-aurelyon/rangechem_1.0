@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title">
+  <title id="title">Sanitizing Solution</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e6fff8"/>
+      <stop offset="100%" stop-color="#b8f0df"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect x="290" y="120" width="220" height="380" rx="44" fill="#ffffff" stroke="#5fb89f" stroke-width="8"/>
+  <rect x="344" y="76" width="112" height="62" rx="18" fill="#d8f6ec" stroke="#5fb89f" stroke-width="8"/>
+  <path d="M360 316 L400 260 L440 316 L412 316 L412 368 L388 368 L388 316 Z" fill="#0c8f6a"/>
+</svg>
