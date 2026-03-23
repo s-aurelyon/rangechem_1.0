@@ -62,13 +62,99 @@ a {
 }
 
 .brand-mark {
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: 42px;
   border-radius: 10px;
-  display: grid;
-  place-items: center;
-  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #f5fbff;
   background: linear-gradient(135deg, var(--primary), #2d8fe3);
+}
+
+.brand-logo {
+  width: 28px;
+  height: 28px;
+}
+
+.brand-drop {
+  transform-origin: center;
+  animation: logo-drop 1.9s ease-in infinite;
+}
+
+.brand-ripple {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: logo-ripple 1.9s ease-in infinite;
+}
+
+.brand-liquid {
+  animation: logo-liquid 1.9s ease-in infinite;
+}
+
+@keyframes logo-drop {
+  0%,
+  24% {
+    transform: translateY(0) scale(0.88);
+    opacity: 0;
+  }
+
+  35% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  72% {
+    transform: translateY(10px) scale(1);
+    opacity: 1;
+  }
+
+  78%,
+  100% {
+    transform: translateY(11px) scale(0.82);
+    opacity: 0;
+  }
+}
+
+@keyframes logo-ripple {
+  0%,
+  70% {
+    transform: scale(0.45);
+    opacity: 0;
+  }
+
+  80% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+@keyframes logo-liquid {
+  0%,
+  70% {
+    opacity: 0.75;
+  }
+
+  82% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.78;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-drop,
+  .brand-ripple,
+  .brand-liquid {
+    animation: none;
+  }
 }
 
 .menu-toggle {

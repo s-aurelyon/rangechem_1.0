@@ -115,9 +115,9 @@ function buildQuoteMailto() {
     return null;
   }
 
-  const subject = "Quote Request - Rangechem Products";
+  const subject = "Quote Request - Rangechem (Pty) Ltd";
   const bodyLines = [
-    "Hello Rangechem Team,",
+    "Hello Rangechem (Pty) Ltd Team,",
     "",
     "Please provide a quote for the following products:",
     ...selectedNames.map((name) => `- ${name}`),
