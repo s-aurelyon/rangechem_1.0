@@ -1,7 +1,3 @@
-/* ─────────────────────────────────────────────────────────
-   RANGECHEM — Script (Redesigned)
-   ───────────────────────────────────────────────────────── */
-
 const products = [
   {
     id: "all-purpose-cleaner",
@@ -44,8 +40,6 @@ const siteMenu = document.getElementById("siteMenu");
 
 const selectionState = new Set();
 
-/* ─── Render ─── */
-
 function renderProducts() {
   productGrid.innerHTML = products
     .map(
@@ -78,8 +72,6 @@ function renderQuoteList() {
     .join("");
 }
 
-/* ─── Selection Logic ─── */
-
 function applySelectionVisuals() {
   products.forEach((product) => {
     const selected = selectionState.has(product.id);
@@ -104,11 +96,6 @@ function applySelectionVisuals() {
 function updateSelection(productId, selected) {
   if (selected) {
     selectionState.add(productId);
-    const card = document.querySelector(`[data-product-card="${productId}"]`);
-    if (card) {
-      card.classList.add("just-selected");
-      card.addEventListener("animationend", () => card.classList.remove("just-selected"), { once: true });
-    }
   } else {
     selectionState.delete(productId);
   }
@@ -120,8 +107,6 @@ function getSelectedProductNames() {
     .filter((product) => selectionState.has(product.id))
     .map((product) => product.name);
 }
-
-/* ─── Quote mailto ─── */
 
 function buildQuoteMailto() {
   const selectedNames = getSelectedProductNames();
@@ -155,8 +140,6 @@ function triggerQuoteMail() {
   window.location.href = mailto;
 }
 
-/* ─── Modal Logic ─── */
-
 function openModal(modalId) {
   const modal = document.getElementById(modalId);
   if (!modal) {
@@ -179,51 +162,11 @@ function closeAllModals() {
   document.querySelectorAll(".modal.is-open").forEach((modal) => closeModal(modal));
 }
 
-/* ─── Initialize ─── */
-
 renderProducts();
 renderQuoteList();
 applySelectionVisuals();
 
 document.getElementById("year").textContent = new Date().getFullYear();
-
-/* ─── Navbar scroll effect ─── */
-
-const topbar = document.querySelector(".topbar");
-
-function onScroll() {
-  topbar.classList.toggle("scrolled", window.scrollY > 10);
-}
-window.addEventListener("scroll", onScroll, { passive: true });
-onScroll();
-
-/* ─── Scroll-reveal for sections ─── */
-
-const revealTargets = document.querySelectorAll(
-  ".feature-card, .product-card, .trust-item, .section-head"
-);
-
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
-);
-
-revealTargets.forEach((el, i) => {
-  el.style.opacity = "0";
-  el.style.transform = "translateY(24px)";
-  el.style.transition = `opacity 0.5s cubic-bezier(0.4,0,0.2,1) ${i % 4 * 0.08}s, transform 0.5s cubic-bezier(0.4,0,0.2,1) ${i % 4 * 0.08}s`;
-  revealObserver.observe(el);
-});
-
-/* ─── Event Listeners ─── */
 
 document.addEventListener("change", (event) => {
   const productCheckbox = event.target.closest("[data-product-checkbox]");
@@ -241,7 +184,6 @@ document.addEventListener("change", (event) => {
 document.addEventListener("click", (event) => {
   const openButton = event.target.closest("[data-modal-open]");
   if (openButton) {
-    event.preventDefault();
     openModal(openButton.dataset.modalOpen);
     if (siteMenu.classList.contains("show")) {
       siteMenu.classList.remove("show");

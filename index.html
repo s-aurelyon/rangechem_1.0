@@ -4,22 +4,17 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Rangechem (Pty) Ltd | Chemical Manufacturing</title>
-	<meta
-		name="description"
-		content="Rangechem (Pty) Ltd are specialists in domestic and industrial chemical manufacturing."
-	/>
+	<meta name="description" content="Rangechem (Pty) Ltd are specialists in domestic and industrial chemical manufacturing." />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-		rel="stylesheet"
-	/>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+	<!-- ─── NAVBAR ─── -->
 	<header class="topbar" id="home">
 		<div class="container nav-wrap">
-				<a href="#home" class="brand" aria-label="Rangechem (Pty) Ltd home">
+			<a href="#home" class="brand" aria-label="Rangechem (Pty) Ltd home">
 				<span class="brand-mark" aria-hidden="true">
 					<svg class="brand-logo" viewBox="0 0 36 36" role="img" focusable="false">
 						<defs>
@@ -42,88 +37,208 @@
 			</a>
 
 			<button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteMenu">
-				☰
+				<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
 			</button>
 
 			<nav>
 				<ul class="menu" id="siteMenu">
 					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
 					<li><a href="#products">Products</a></li>
 					<li><a href="#contact">Contact</a></li>
-					<li><button class="menu-btn" data-modal-open="aboutModal">About Us</button></li>
-					<li><button class="menu-btn cta" data-modal-open="quoteModal">Request a Quote</button></li>
+					<li><a href="#" class="cta-link" data-modal-open="quoteModal">Get a Quote</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 
 	<main>
+		<!-- ─── HERO ─── -->
 		<section class="hero">
-			<div class="hero-overlay"></div>
+			<div class="hero-bg"></div>
 			<div class="container hero-content">
-				<p class="hero-kicker">Trusted Chemical Partner Since 1996</p>
-				<h1>Specialists in Domestic and Industrial Chemical Manufacturing</h1>
-				<p>
-					Rangechem (Pty) Ltd develops high-quality chemical solutions for homes,
-					facilities, and production environments.
+				<div class="hero-badge">Trusted Chemical Partner Since 1996</div>
+				<h1>Premium Chemical<br>Solutions for Industry<br>&amp; Home</h1>
+				<p class="hero-sub">
+					Rangechem (Pty) Ltd delivers high-performance domestic and industrial
+					chemical products — engineered for quality, safety, and reliability.
 				</p>
-				<a href="#products" class="hero-link">View Products</a>
+				<div class="hero-actions">
+					<a href="#products" class="btn btn-primary btn-lg">Explore Products</a>
+					<a href="#" class="btn btn-outline-light btn-lg" data-modal-open="quoteModal">Request a Quote</a>
+				</div>
+			</div>
+			<div class="hero-scroll-hint" aria-hidden="true">
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
 			</div>
 		</section>
 
+		<!-- ─── TRUST BAR ─── -->
+		<section class="trust-bar">
+			<div class="container">
+				<div class="trust-grid">
+					<div class="trust-item">
+						<span class="trust-number">25+</span>
+						<span class="trust-label">Years in Operation</span>
+					</div>
+					<div class="trust-item">
+						<span class="trust-number">500+</span>
+						<span class="trust-label">Clients Served</span>
+					</div>
+					<div class="trust-item">
+						<span class="trust-number">50+</span>
+						<span class="trust-label">Product Formulations</span>
+					</div>
+					<div class="trust-item">
+						<span class="trust-number">100%</span>
+						<span class="trust-label">Quality Commitment</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ─── ABOUT / VALUE PROPS ─── -->
+		<section class="section about" id="about">
+			<div class="container">
+				<div class="section-head centered">
+					<p class="section-kicker">Why Rangechem</p>
+					<h2>Built on Science.<br>Driven by Quality.</h2>
+					<p class="section-sub">We combine decades of formulation expertise with rigorous quality control to deliver chemical products that perform — every time.</p>
+				</div>
+
+				<div class="features-grid">
+					<div class="feature-card">
+						<div class="feature-icon">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0-4h18"/></svg>
+						</div>
+						<h3>Domestic &amp; Industrial</h3>
+						<p>From household cleaners to heavy-duty industrial solutions, our range covers every environment.</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+						</div>
+						<h3>Safety First</h3>
+						<p>Every product meets strict safety and compliance standards, protecting people and the environment.</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+						</div>
+						<h3>Client Focused</h3>
+						<p>We work closely with clients to develop custom formulations that match their specific requirements.</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+						</div>
+						<h3>Proven Performance</h3>
+						<p>With over 25 years of consistent results, our products are trusted by leading facilities across South Africa.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ─── PRODUCTS ─── -->
 		<section class="section products" id="products">
 			<div class="container">
-				<div class="section-head">
-					<h2>Products</h2>
-					<p>Select products below to include them in your quote request.</p>
+				<div class="section-head centered">
+					<p class="section-kicker">Our Products</p>
+					<h2>Chemical Solutions<br>That Deliver Results</h2>
+					<p class="section-sub">Browse our product range and select the items you need — then request a tailored quote in seconds.</p>
 				</div>
 
 				<div class="product-grid" id="productGrid"></div>
 
 				<div class="products-actions">
-					<button id="requestQuoteFromProducts" class="primary-btn">Request a Quote</button>
+					<button id="requestQuoteFromProducts" class="btn btn-primary btn-lg">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+						Request a Quote for Selected Products
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- ─── CTA BANNER ─── -->
+		<section class="cta-banner">
+			<div class="container">
+				<div class="cta-inner">
+					<div class="cta-text">
+						<h2>Ready to Get Started?</h2>
+						<p>Let us know what you need and we'll provide a competitive quote within 24 hours.</p>
+					</div>
+					<a href="#" class="btn btn-white btn-lg" data-modal-open="quoteModal">Request a Quote</a>
 				</div>
 			</div>
 		</section>
 	</main>
 
+	<!-- ─── FOOTER ─── -->
 	<footer class="footer" id="contact">
-		<div class="container footer-grid">
-				<div>
-					<h3>Contact</h3>
-					<p>Rangechem (Pty) Ltd</p>
-					<p>1234 Brackenfell Industria, Cape Town, South Africa</p>
-					<p><a href="mailto:quotes@rangechem.co.za">quotes@rangechem.co.za</a></p>
-					<p><a href="tel:+272122222222">+27 21 222 2222</a></p>
+		<div class="container">
+			<div class="footer-grid">
+				<div class="footer-brand">
+					<a href="#home" class="brand brand-footer" aria-label="Rangechem home">
+						<span class="brand-mark" aria-hidden="true">
+							<svg class="brand-logo" viewBox="0 0 36 36" role="img" focusable="false">
+								<defs><clipPath id="rc-flask-clip-f"><path d="M14 5 V13 L6 27 C4.5 32 9 35 18 35 C27 35 31.5 32 30 27 L22 13 V5 Z"/></clipPath></defs>
+								<rect x="0" y="24" width="36" height="12" fill="currentColor" opacity="0.3" clip-path="url(#rc-flask-clip-f)"/>
+								<path d="M13 5 H23 M14 5 V13 L6 27 C4.5 32 9 35 18 35 C27 35 31.5 32 30 27 L22 13 V5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</span>
+						<span class="brand-text">Rangechem</span>
+					</a>
+					<p class="footer-tagline">Specialists in domestic and industrial chemical manufacturing since 1996.</p>
 				</div>
 
-			<div>
-				<h3>About Rangechem</h3>
-				<p>
-					Rangechem (Pty) Ltd is focused on safe, compliant, and reliable chemical
-					manufacturing for domestic and industrial applications.
-				</p>
+				<div>
+					<h4 class="footer-heading">Quick Links</h4>
+					<ul class="footer-links">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#products">Products</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+
+				<div>
+					<h4 class="footer-heading">Contact</h4>
+					<ul class="footer-links">
+						<li>1234 Brackenfell Industria</li>
+						<li>Cape Town, South Africa</li>
+						<li><a href="mailto:quotes@rangechem.co.za">quotes@rangechem.co.za</a></li>
+						<li><a href="tel:+272122222222">+27 21 222 2222</a></li>
+					</ul>
+				</div>
+
+				<div>
+					<h4 class="footer-heading">Legal</h4>
+					<ul class="footer-links">
+						<li>Product specifications may change without notice.</li>
+					</ul>
+				</div>
 			</div>
 
-				<div>
-					<h3>Legal</h3>
-					<p>© <span id="year"></span> Rangechem (Pty) Ltd. All rights reserved.</p>
-					<p>Product specifications may change without notice.</p>
-				</div>
+			<div class="footer-bottom">
+				<p>&copy; <span id="year"></span> Rangechem (Pty) Ltd. All rights reserved.</p>
+			</div>
 		</div>
 	</footer>
 
+	<!-- ─── MODALS ─── -->
 	<div class="modal" id="aboutModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="aboutModalTitle">
 		<div class="modal-card">
 			<div class="modal-header">
-				<h3 id="aboutModalTitle">About Us</h3>
-				<button class="icon-btn" data-modal-close aria-label="Close About Us">×</button>
+				<h3 id="aboutModalTitle">About Rangechem</h3>
+				<button class="icon-btn" data-modal-close aria-label="Close About Us">
+					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+				</button>
 			</div>
-				<p>
-					Rangechem (Pty) Ltd manufactures domestic and industrial chemical products
-					with a strong focus on quality control, safety standards, and customer
-					support.
-				</p>
+			<p>
+				Rangechem (Pty) Ltd manufactures domestic and industrial chemical products
+				with a strong focus on quality control, safety standards, and customer
+				support. Since 1996, we have been a trusted partner for businesses across South Africa.
+			</p>
 		</div>
 	</div>
 
@@ -131,14 +246,19 @@
 		<div class="modal-card">
 			<div class="modal-header">
 				<h3 id="quoteModalTitle">Request a Quote</h3>
-				<button class="icon-btn" data-modal-close aria-label="Close Request a Quote">×</button>
+				<button class="icon-btn" data-modal-close aria-label="Close Request a Quote">
+					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+				</button>
 			</div>
 
-			<p class="modal-note">Select products and click “Send Request” to open your mail app.</p>
+			<p class="modal-note">Select the products you're interested in, then click "Send Request" to open your email client with a pre-filled message.</p>
 			<div class="quote-list" id="quoteList"></div>
 
 			<div class="modal-actions">
-				<button class="primary-btn" id="sendRequestBtn">Send Request</button>
+				<button class="btn btn-primary" id="sendRequestBtn">
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+					Send Request
+				</button>
 			</div>
 		</div>
 	</div>
